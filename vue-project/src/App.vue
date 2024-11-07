@@ -15,6 +15,8 @@ const menu=[
   const orderList=ref([])
   const gestionarLlista=(producte)=>{
     orderList.value.push(producte)
+  }
+  const mostrarProducte=()=>{
     const alertText=orderList.value.join(",")
     alert(alertText)
   }
@@ -24,6 +26,7 @@ const menu=[
  <main>
   <h1>{{ orderName }}</h1>
   <input type="text" v-model="orderName" placeholder="Command name"/>
+  <button @click="mostrarProducte">Demanar ordre</button>
   <br/>
   <br/>
   <label>

@@ -1,6 +1,5 @@
 <script setup>
-import { inject } from 'vue';
-const currency = inject('currency')
+import Currency from './Currency.vue';
 const props = defineProps({
     productName:String,
     productPrice:String
@@ -12,5 +11,5 @@ const enviarProducte=()=>{
 </script>
 
 <template>
-    <li>{{ productName }} - {{ productPrice }} {{ currency }}  <button @click="enviarProducte">Add to order</button></li>
+    <li>{{ productName }} - {{ productPrice }} <Currency/>  <button @click="enviarProducte">Add to order</button></li>
 </template>
